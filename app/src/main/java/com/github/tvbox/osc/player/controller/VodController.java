@@ -1111,28 +1111,12 @@ public class VodController extends BaseController {
     }
 
     void increasePlaySpeed(float speed) {
-        if (speed == 5) {
-            speed = 0.25f;
-        } else if (speed >= 2 & speed < 3) {
-            speed += 0.5f;
-        } else if (speed >= 3) {
-            speed += 1.0f;
-        } else {
-            speed += 0.25f;
-        }
+        speed += 1f;
         setPlaySpeed(speed);
     }
 
     void decreasePlaySpeed(float speed) {
-        if (speed == 0.25f) {
-            speed = 5.0f;
-        } else if (speed > 3) {
-            speed -= 1.0f;
-        } else if (speed > 2 & speed <= 3) {
-            speed -= 0.5f;
-        } else {
-            speed -= 0.25f;
-        }
+        speed -= 1f;
         setPlaySpeed(speed);
     }
 
